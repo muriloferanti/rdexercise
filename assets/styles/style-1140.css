@@ -1,0 +1,9 @@
+@media only screen and (max-width: 1140px) {
+  .opportunity .content .left-side, .together .content .left-side, .create-account .content .left-side, header > .content > .list {
+    max-width: 430px;
+  }
+  .view-demo .content .right-side {
+    right: 2.5vw;
+  }
+}
+/*# sourceMappingURL=style-1140.css.map */

@@ -1,0 +1,45 @@
+@media only screen and (max-width: 979px) {
+    header > .content{
+        justify-content: space-between;
+        height: 64px;
+        >a img{
+            width: 136px;
+        }
+        >.list, .buttons-header{
+            display: none;
+        }
+        .hamb{
+            display: flex;
+        }
+    }
+
+
+    footer{
+        .content{
+            .top-side{
+                flex-direction: column;
+                border-bottom: 0px;
+                > a{
+                    display: flex;
+                    justify-content: center;
+                    border-bottom: 1px solid #78EDF2;
+                    padding-bottom: 24px;
+                    margin-bottom: 24px;
+                }
+                ul.links{
+                    justify-content: center;
+                    li a{
+                        margin-left: 12px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+            .bottom-side{
+                padding-top: 0px;
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
