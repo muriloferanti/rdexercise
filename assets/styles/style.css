@@ -185,7 +185,7 @@ ul {
 }
 
 .hamb:after, .hamb:before {
-  content: '';
+  content: ' ';
   position: absolute;
   left: 0;
 }
@@ -385,6 +385,8 @@ footer .content .bottom-side p a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .create-account .content .right-side ul.brands li {
@@ -432,6 +434,15 @@ footer .content .bottom-side p a:hover {
 
 .create-account .content .right-side ul.brands li a:hover p {
   color: #19C1CE;
+}
+
+.create-account .content .right-side ul.brands .hlpr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.open-modal-video > * {
+  pointer-events: none;
 }
 
 .view-demo {
@@ -617,7 +628,7 @@ footer .content .bottom-side p a:hover {
 .create-account-free .content p {
   max-width: 808px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   text-align: center;
@@ -650,8 +661,8 @@ footer .content .bottom-side p a:hover {
   background-repeat: no-repeat;
   width: 50%;
   height: 100%;
-  -webkit-animation: gates 6s ease infinite;
-          animation: gates 6s ease infinite;
+  -webkit-animation: gates 4s ease infinite;
+          animation: gates 4s ease infinite;
 }
 
 .create-account-free .content:after {
@@ -976,6 +987,17 @@ footer .content .bottom-side p a:hover {
   border-radius: 2px;
 }
 
+.form .error {
+  font-size: 13px;
+  color: #b40000;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 140%;
+  text-align: left;
+  position: absolute;
+  top: 100%;
+}
+
 .form form {
   max-width: 448px;
   width: 100%;
@@ -1012,6 +1034,14 @@ footer .content .bottom-side p a:hover {
   margin-bottom: 24px;
 }
 
+.form form .thanks-success {
+  text-align: center;
+  padding-top: 16px;
+  color: #01c121;
+  font-size: 20px;
+  font-family: 'Darker Grotesque';
+}
+
 .form form .input-square {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -1034,7 +1064,7 @@ footer .content .bottom-side p a:hover {
   margin-bottom: 8px;
 }
 
-.form form .input-square input[type="text"], .form form .input-square input[type="tel"], .form form .input-square input[type="email"], .form form .input-square input[type="password"] {
+.form form .input-square input[type="text"], .form form .input-square input[type="tel"], .form form .input-square input[type="email"], .form form .input-square input[type="password"], .form form .input-square input[type="url"] {
   background: #FFFFFF;
   border: 2px solid #000000;
   -webkit-box-sizing: border-box;
@@ -1122,6 +1152,7 @@ footer .content .bottom-side p a:hover {
 
 .form form .input-square .hidden {
   height: 0px;
+  position: relative;
   overflow: hidden;
   -webkit-transition: 300ms all ease;
   transition: 300ms all ease;
@@ -1133,6 +1164,7 @@ footer .content .bottom-side p a:hover {
   height: auto;
   opacity: 1;
   margin-top: 16px;
+  overflow: visible;
 }
 
 .form form .input-square.site-square {
@@ -1412,5 +1444,116 @@ footer .content .bottom-side p a:hover {
     -webkit-transform: rotateZ(180deg);
             transform: rotateZ(180deg);
   }
+}
+
+.popup-video {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.popup-video .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.popup-video .object {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  top: -40px;
+  -webkit-transition: 300ms top ease;
+  transition: 300ms top ease;
+  max-height: calc(100vh - 63px);
+}
+
+.popup-video .object .close-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 22px;
+  width: 22px;
+  position: relative;
+  position: absolute;
+  right: -2px;
+  top: -28px;
+  cursor: pointer;
+}
+
+.popup-video .object .close-popup:after, .popup-video .object .close-popup:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #23ebfb;
+  display: block;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.popup-video .object .close-popup:after {
+  bottom: 9px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popup-video .object .close-popup:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 9px;
+}
+
+.popup-video .object .video {
+  width: 100%;
+  height: auto;
+}
+
+.popup-video .object .video iframe {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+}
+
+.popup-video.active {
+  visibility: visible;
+  pointer-events: inherit;
+  opacity: 1;
+}
+
+.popup-video.active .object {
+  top: 0px;
 }
 /*# sourceMappingURL=style.css.map */
