@@ -144,7 +144,7 @@ document.getElementById('form-data').addEventListener('submit', function (event)
 
     let msgpass = false;
     let passval = document.getElementById('password').value;
-    if(passval.length > 5 && passval.length < 11){
+    if(passval.length < 6 && passval.length > 10){
         msgpass = 'A senha deve ter no mínimo 6 e no máximo 10 caracteres';
     }
     if(!/[a-z]/.test(passval)){
