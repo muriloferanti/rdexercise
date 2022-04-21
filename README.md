@@ -1,4 +1,4 @@
-# RDStation | Teste Dev Frontend Marketing
+# RD Station | Teste Dev Frontend Marketing
 Um exercício realizado pelo RD Station
 
 (Não tive muito tempo para o desenvolvimento pois trabalho em loco em horário não flexível.)
