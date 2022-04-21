@@ -16,3 +16,6 @@ Problemas encontrados:
 Ao submeter meu formulário para o action indicado no exercício tive Cors bloqueados.
 
 No exercício foi solicitado o responsivo para telas menores que 768px, porém fiz ajustes em telas maiores também.
+
+GitHub Pages:
+<a target="_blank" href="https://muriloferanti.github.io/rdexercise/">https://muriloferanti.github.io/rdexercise/</a>
