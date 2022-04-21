@@ -182,9 +182,13 @@ document.getElementById('form-data').addEventListener('submit', function (event)
     for (let i = 0; i < clearform.length; i++) {
         clearform[i].remove();
     }
+    window.scrollTo({
+        top: document.getElementById("form-data").getBoundingClientRect().top,
+        behavior: "smooth"
+    });
     document.querySelector('.form form > ul').remove();
     document.querySelector('.out-side-button').remove();
     document.querySelector('.form form').append(document.createElement('div'));
-    document.querySelector('.form form div').innerHTML = '<div class="thanks-success">"Obrigado!, entraremos em contato</div>';
+    document.querySelector('.form form div').innerHTML = '<div class="thanks-success">Obrigado!, entraremos em contato</div>';
 
 }, false);
